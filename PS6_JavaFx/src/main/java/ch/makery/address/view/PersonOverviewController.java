@@ -119,7 +119,7 @@ public class PersonOverviewController {
         	PersonDAL.deletePerson(perID);
         	System.out.println("Try to delete: " + perID.toString());
         	
-        
+            PersonDAL.deletePerson(perID);
         	 
             personTable.getItems().remove(selectedIndex);
             
@@ -157,8 +157,7 @@ public class PersonOverviewController {
         	per.setBirthday(tempPerson.getBirthday());
         	
         	
-        	//TODO: Delete the person, call the addPerson(perID) method
-        	//		in the DAL
+        	
         	        	
             PersonDAL.addPerson(tempPerson);
         	mainApp.getPersonData().add(tempPerson);
@@ -189,8 +188,7 @@ public class PersonOverviewController {
             	
             	PersonDAL.updatePerson(selectedPerson);
             	
-            	//TODO: Delete the person, call the updatePerson(perID) method
-            	//		in the DAL
+            	
             	
             	
                 showPersonDetails(selectedPerson);
